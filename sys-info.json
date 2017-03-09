@@ -1,0 +1,4 @@
+{
+  runningcontainers:["§§INSTANCE-limesurvey", "§§INSTANCE-limesurvey-db"],
+  supportcontainers:["§§INSTANCE-limesurvey-data"]    
+}

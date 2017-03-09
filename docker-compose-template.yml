@@ -1,0 +1,48 @@
+version: '2'
+
+networks:
+    bibbox-default-network:
+      external: true
+
+services:
+
+  §§INSTANCE-owncloud:
+    image: owncloud:9.1.4-apache
+    container_name:  §§INSTANCE-owncloud
+    restart: unless-stopped
+    networks:
+      - bibbox-default-network
+    links:
+      - §§INSTANCE-owncloud-db:owncloud-db
+    ports:
+      - "§§PORT:80"
+    depends_on:
+      - §§INSTANCE-owncloud-db
+      - §§INSTANCE-owncloud-data
+    volumes_from: 
+      - §§INSTANCE-owncloud-data
+
+  §§INSTANCE-owncloud-db:
+    image: mysql:8
+    container_name: §§INSTANCE-owncloud-db
+    restart: unless-stopped
+    networks:
+      - bibbox-default-network
+    user: root
+    environment:
+      - MYSQL_ROOT_PASSWORD=thispasswordisneverusedeveninsidethecontainer
+      - MYSQL_DATABASE=owncloud
+      - MYSQL_USER=owncloud
+      - MYSQL_PASSWORD=owncloud4bibbox
+    volumes_from: 
+      - §§INSTANCE-owncloud-data
+    depends_on:
+      - §§INSTANCE-owncloud-data
+
+  §§INSTANCE-owncloud-data:
+    image: busybox
+    container_name: §§INSTANCE-owncloud-data
+    volumes:
+      - ./var/lib/mysql:/var/lib/mysql
+      - ./var/www/html/data:/var/www/html/data
+
