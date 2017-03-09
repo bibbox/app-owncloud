@@ -45,4 +45,5 @@ services:
     volumes:
       - ./var/lib/mysql:/var/lib/mysql
       - ./var/www/html/data:/var/www/html/data
+      - ./var/www/html/apps:/var/www/html/apps
 
