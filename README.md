@@ -5,7 +5,7 @@
 
 
 ## Docker Images Used
- * [owncloud](https://hub.docker.com/_/owncloud/) 
+ * [owncloud](https://hub.docker.com/_/owncloud/), official OwnCloud container
  * [mySQL](https://hub.docker.com/_/mysql/), offical mySQL container
  * [busybox](https://hub.docker.com/_/busybox/), offical data container
  
