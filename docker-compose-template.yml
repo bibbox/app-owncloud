@@ -23,7 +23,7 @@ services:
       - §§INSTANCE-owncloud-data
 
   §§INSTANCE-owncloud-db:
-    image: mysql:8
+    image: mariadb
     container_name: §§INSTANCE-owncloud-db
     restart: unless-stopped
     networks:
