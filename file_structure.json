@@ -1,8 +1,8 @@
 {
   "makefolders":[
-    "var/lib/mysql",
-    "var/www/html/data",
-    "var/www/html/apps"
+    "data/mysql",
+    "data/data",
+    "data/apps"
   ],
   "copyfiles":[]
 }
