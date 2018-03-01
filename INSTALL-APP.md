@@ -4,7 +4,7 @@ Database information is as follows:
 
 ```
 Database user:      owncloud
-Database password:  owncloud4bibbox
+Database password:  <yourPassword> (Default: changethispasswordinproductionenvironments) 
 Database name:      owncloud
 Database host:      owncloud-db
 ```
@@ -21,7 +21,7 @@ Database host:      owncloud-db
 * This BIBBOX application already comes with an up and running MySQL database. So all you need to do is enter a OwnCloud **username** and **password** for your administrator account and enter the following information under the **MySQL/MariaDB** tab of the database configuration area:
 
         Database user:      owncloud
-        Database password:  owncloud4bibbox
+        Database password:  <yourPassword> (Default: changethispasswordinproductionenvironments) 
         Database name:      owncloud
         Database host:      owncloud-db
         
