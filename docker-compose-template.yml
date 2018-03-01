@@ -33,7 +33,7 @@ services:
       - MYSQL_ROOT_PASSWORD=thispasswordisneverusedeveninsidethecontainer
       - MYSQL_DATABASE=owncloud
       - MYSQL_USER=owncloud
-      - MYSQL_PASSWORD=owncloud4bibbox
+      - MYSQL_PASSWORD=§§MYSQL_PASSWORD
     volumes_from: 
       - §§INSTANCE-owncloud-data
     depends_on:
@@ -43,7 +43,7 @@ services:
     image: busybox
     container_name: §§INSTANCE-owncloud-data
     volumes:
-      - ./var/lib/mysql:/var/lib/mysql
-      - ./var/www/html/data:/var/www/html/data
-      - ./var/www/html/apps:/var/www/html/apps
+      - ./data/mysql:/var/lib/mysql
+      - ./data/data:/var/www/html/data
+      - ./data/apps:/var/www/html/apps
 

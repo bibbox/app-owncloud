@@ -1,1 +1,11 @@
-[]
+[
+    {
+       "id":"Mysql_PASSWORD",
+       "display_name":"MYSQL DB Password",
+       "type":"text",
+       "default_value":"changethispasswordinproductionenvironments",
+       "description":" Password for MYSQL DB (change in production)",
+       "min_length": "1",
+       "max_length": "128"
+    }
+]
