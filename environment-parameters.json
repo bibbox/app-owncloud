@@ -1,6 +1,6 @@
 [
     {
-       "id":"Mysql_PASSWORD",
+       "id":"MYSQL_PASSWORD",
        "display_name":"MYSQL DB Password",
        "type":"text",
        "default_value":"changethispasswordinproductionenvironments",
