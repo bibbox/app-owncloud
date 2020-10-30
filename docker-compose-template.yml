@@ -36,5 +36,3 @@ services:
       - MYSQL_PASSWORD=§§MYSQL_PASSWORD
     volumes: 
       - ./data/mysql:/var/lib/mysql
-    depends_on:
-      - §§INSTANCE-owncloud-data
