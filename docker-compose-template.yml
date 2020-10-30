@@ -15,7 +15,7 @@ services:
     links:
       - §§INSTANCE-owncloud-db:owncloud-db
     ports:
-      - "§§PORT:80"
+      - "80"
     depends_on:
       - §§INSTANCE-owncloud-db
     volumes:
