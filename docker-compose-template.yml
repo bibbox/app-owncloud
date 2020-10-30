@@ -22,6 +22,7 @@ services:
       - ./data/data:/var/www/html/data
       - ./data/apps:/var/www/html/apps
       - ./config:/var/www/html/config
+      - ./entrypoint.sh:/var/entrypoint.sh
 
   §§INSTANCE-owncloud-db:
     image: mariadb
