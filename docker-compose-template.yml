@@ -1,4 +1,4 @@
-version: '2'
+version: '3.8'
 
 networks:
     bibbox-default-network:
@@ -18,9 +18,9 @@ services:
       - "§§PORT:80"
     depends_on:
       - §§INSTANCE-owncloud-db
-      - §§INSTANCE-owncloud-data
-    volumes_from: 
-      - §§INSTANCE-owncloud-data
+    volumes:
+      - ./data/data:/var/www/html/data
+      - ./data/apps:/var/www/html/apps
 
   §§INSTANCE-owncloud-db:
     image: mariadb
@@ -34,16 +34,7 @@ services:
       - MYSQL_DATABASE=owncloud
       - MYSQL_USER=owncloud
       - MYSQL_PASSWORD=§§MYSQL_PASSWORD
-    volumes_from: 
-      - §§INSTANCE-owncloud-data
+    volumes: 
+      - ./data/mysql:/var/lib/mysql
     depends_on:
       - §§INSTANCE-owncloud-data
-
-  §§INSTANCE-owncloud-data:
-    image: busybox
-    container_name: §§INSTANCE-owncloud-data
-    volumes:
-      - ./data/mysql:/var/lib/mysql
-      - ./data/data:/var/www/html/data
-      - ./data/apps:/var/www/html/apps
-
