@@ -21,7 +21,7 @@ services:
     volumes:
       - ./data/data:/var/www/html/data
       - ./data/apps:/var/www/html/apps
-      - ./configs:/var/www/html/config
+      - ./config:/var/www/html/config
 
   §§INSTANCE-owncloud-db:
     image: mariadb
