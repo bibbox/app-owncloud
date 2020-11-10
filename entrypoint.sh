@@ -4,12 +4,12 @@ file=/opt/dist/deployed.done
 
 if [ ! -f $file ] ; then
 
-  mkdir owncloud77
-  cp -R * owncloud77/
-  cd owncloud77/
-  rm -R owncloud77/
+  mkdir §§INSTANCENAME
+  cp -R * §§INSTANCENAME/
+  cd §§INSTANCENAME/
+  rm -R §§INSTANCENAME/
   cd ..
-  chown -R www-data owncloud77/
+  chown -R www-data §§INSTANCENAME/
   service apache2 reload
   apt-get update
   apt-get install nano
