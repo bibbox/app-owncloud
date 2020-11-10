@@ -14,7 +14,5 @@ if [ ! -f $file ] ; then
   apt-get update
   apt-get install nano
   touch /opt/dist/deployed.done
-  service apache2 start
-  tail -f /var/log/dpkg.log
-  
+  service apache2 start  
 fi
